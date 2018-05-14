@@ -1,0 +1,30 @@
+docker commands for Jankings
+(grou/user Ids)
+
+falls in jankings nicht geht -> docker (kompletten pfad zum docker-App)
+
+docker rm parcel_size
+docker rm parcel_server
+
+
+docker rmi parcel_size
+docker rmi rm parcel_server
+
+
+docker build -t parcel_size .
+docker build -t parcel_server .
+
+
+docker run -it -p 8181:80 --name=parcel_size parcel_size
+docker run -it -p 8282:80 --name=parcel_server parcel_server
+
+docker run -d --restart always -p 8181:80 --name=parcel_size parcel_size
+docker run -d --restart always -p 8282:80 --name=parcel_server parcel_server
+
+
+
+im parcel_size ->  #APP
+java -jar ./build/libs/ParcelSize.jar
+
+
+

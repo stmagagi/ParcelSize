@@ -16,7 +16,7 @@ public class ApiServer {
 		// TODO Auto-generated method stub
 		HttpServer server;
 		try {
-			server = HttpServerFactory.create( "http://localhost:5454/rest");
+			server = HttpServerFactory.create( "http://localhost:5555/rest");
 			//http://localhost:5555/rest/servlets/hay?
 			server.start();
 		} catch (IllegalArgumentException | IOException e) {
